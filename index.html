@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beka Shatirishvili — Copywriter & SEO Content Writer</title>
+  <meta name="description" content="Copywriter & SEO Content Writer (English + Georgian). SEO blogs, landing pages, website copy, campaigns. Case studies: GNTA, Nova, Europroduct, Alpaca." />
+  <style>
+    :root{
+      --bg:#f6f2ea;
+      --card:#ffffff;
+      --ink:#1b1b1b;
+      --muted:#5e5e5e;
+      --line:rgba(0,0,0,.08);
+      --shadow:0 16px 40px rgba(0,0,0,.08);
+      --shadow2:0 10px 26px rgba(0,0,0,.07);
+      --pill:#f1ede6;
+      --accent:#111111;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1040px;margin:0 auto;padding:22px 18px 72px}
+
+    .top{display:flex;align-items:center;justify-content:space-between;padding:10px 2px 18px}
+    .brand{
+      font-weight:600;font-size:15px;letter-spacing:.01em;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .nav{display:flex;gap:18px;flex-wrap:wrap;font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;font-size:13.5px}
+    .nav a{text-decoration:none;color:var(--muted)}
+    .nav a:hover{color:var(--ink)}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow2);
+    }
+
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;padding:22px;margin-top:6px}
+    .hero h1{margin:0 0 10px;font-size:28px;line-height:1.15;font-style:italic;font-weight:600}
+    .hero p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;max-width:62ch}
+    .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{
+      background:var(--pill);border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:12.5px;color:var(--ink);
+    }
+    .mini{
+      height:70px;border-radius:14px;border:1px solid var(--line);
+      background:linear-gradient(135deg, rgba(0,0,0,.04), rgba(0,0,0,.02));
+      display:flex;align-items:center;justify-content:center;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:12px;color:var(--muted);padding:12px;text-align:center;
+    }
+
+    .toc{margin-top:18px;padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+    .toc h2{margin:0 0 6px;font-size:18px;font-weight:600}
+    .toc p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px}
+    .toc ol{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted)}
+    .toc a{text-decoration:none;color:inherit}
+    .toc a:hover{color:var(--ink)}
+
+    section{padding:26px 2px 0}
+    .hlabel{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 8px}
+    h3.sec{margin:0 0 14px;font-size:22px;font-weight:700}
+
+    .intro{display:grid;grid-template-columns:1.4fr .9fr;gap:20px;align-items:start}
+    .intro .bubble{
+      width:min(260px, 100%);aspect-ratio:1/1;border-radius:999px;border:1px solid var(--line);
+      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
+      box-shadow:var(--shadow2);display:flex;align-items:center;justify-content:center;
+      margin:6px auto 0;color:var(--muted);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12px;text-align:center;padding:18px;
+    }
+    .bullets{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;color:var(--ink)}
+    .bullets li{margin:10px 0}
+    .subp{margin:12px 0 0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.4px;color:var(--muted);max-width:70ch}
+
+    .grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:14px}
+    .span4{grid-column:span 4}
+    .span6{grid-column:span 6}
+    .span12{grid-column:span 12}
+
+    .skill{
+      padding:14px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);box-shadow:var(--shadow2);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+    .skill h4{margin:0 0 6px;font-size:13.5px}
+    .skill p{margin:0;color:var(--muted);font-size:12.8px}
+
+    .project{padding:16px}
+    .row{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;align-items:start}
+    .badge{
+      display:inline-block;background:#111;color:#fff;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:11px;padding:6px 10px;border-radius:999px;
+      text-transform:uppercase;letter-spacing:.06em;margin-top:10px;
+    }
+    .muted{color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .k{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin:0 0 6px}
+    .client{font-size:14px;font-weight:700;margin:0 0 6px;letter-spacing:.02em}
+    .projtext{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 10px}
+
+    .box{border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.65);padding:12px;margin-top:10px}
+    .box h5{margin:0 0 6px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12.5px}
+    .box ul{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12.8px;color:var(--muted)}
+    .box li{margin:6px 0}
+
+    .shot{
+      border:1px solid var(--line);border-radius:14px;
+      background:linear-gradient(135deg, rgba(0,0,0,.04), rgba(0,0,0,.02));
+      height:178px;display:flex;align-items:center;justify-content:center;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--muted);font-size:12px;text-align:center;padding:12px;
+    }
+    .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .metric{
+      border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.65);
+      padding:14px 12px;text-align:center;box-shadow:var(--shadow2);
+    }
+    .metric .num{font-size:18px;font-weight:700;font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}
+    .metric .lab{margin-top:4px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--muted);font-size:12px}
+
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .tag{
+      background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;
+      padding:7px 10px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-size:12px;color:var(--muted);box-shadow:var(--shadow2);
+    }
+
+    .tcard{
+      padding:14px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.7);box-shadow:var(--shadow2);
+    }
+    .tcard p{margin:0;color:var(--muted);font-size:13px}
+    .tcard .who{margin-top:10px;color:var(--ink);font-size:12.5px;font-weight:600}
+
+    .footer{
+      margin-top:24px;background:#121212;color:#fff;border-radius:16px;padding:18px;
+      display:grid;grid-template-columns:1.4fr 1fr;gap:16px;
+      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);
+    }
+    .footer h4{margin:0 0 6px;font-size:18px}
+    .footer p{margin:0;color:rgba(255,255,255,.75);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px}
+    .footer .meta{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6}
+    .footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+    .footnote{text-align:center;color:rgba(0,0,0,.45);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12px;margin-top:18px}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .toc{grid-template-columns:1fr}
+      .intro{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .span4,.span6{grid-column:span 12}
+      .footer{grid-template-columns:1fr}
+    }
+    @media (max-width: 520px){
+      .metrics{grid-template-columns:1fr}
+      .hero h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">Beka Shatirishvili</div>
+      <div class="nav">
+        <a href="#work">Portfolio</a>
+        <a href="#contact">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="card hero">
+      <div>
+        <h1>Every brand has a story worth telling —<br/>I bring it to life with the right words.</h1>
+        <p>
+          I’m a copywriter helping brands turn complex ideas into clear, compelling stories — from long-form content and web copy to SEO articles and campaigns that actually move the needle.
+        </p>
+        <div class="pills">
+          <span class="pill">6+ years of writing experience</span>
+          <span class="pill">50+ clients</span>
+          <span class="pill">English & Georgian</span>
+        </div>
+      </div>
+      <div class="mini">
+        <strong>Portrait</strong> (optional)<br/>
+        Add your photo later by replacing this box with an &lt;img&gt; tag.
+      </div>
+    </div>
+
+    <div class="card toc" id="top">
+      <div>
+        <h2>Table of Contents</h2>
+        <p>A quick overview of what you’ll find in this portfolio — from my skills and approach to selected case studies and results.</p>
+      </div>
+      <div>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#skills">Writing skills</a></li>
+          <li><a href="#work">Popular projects</a></li>
+          <li><a href="#brands">Other brands & companies</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact me</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <section id="introduction">
+      <p class="hlabel">Introduction</p>
+      <h3 class="sec">What I bring to the table</h3>
+
+      <div class="intro">
+        <div>
+          <ul class="bullets">
+            <li><strong>6+ years of writing experience</strong> across agencies, media, and freelance work.</li>
+            <li><strong>50+ clients</strong> — from national brands and NGOs to startups and international projects.</li>
+            <li><strong>SEO + storytelling</strong> — data-informed content with a human voice that speaks to readers, not just algorithms.</li>
+            <li><strong>15+ industries</strong> including tourism, tech, e-commerce, education, real estate, culture, and more.</li>
+          </ul>
+          <p class="subp">
+            My work sits at the intersection of strategy and storytelling. I help teams clarify what they want to say, find the angle that matters, and turn it into content that drives clicks, reads, and real-world results.
+          </p>
+        </div>
+        <div class="bubble">Optional graphic / photo area</div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="hlabel">Writing skills</p>
+      <h3 class="sec">What I write</h3>
+      <div class="grid">
+        <div class="skill span4">
+          <h4>Website & landing page copy</h4>
+          <p>Clear structure, messaging hierarchy, and brand voice that explains what you do — and why it matters.</p>
+        </div>
+        <div class="skill span4">
+          <h4>SEO content & blogs</h4>
+          <p>Search-optimized, topic-driven articles that keep readers reading — no keyword stuffing.</p>
+        </div>
+        <div class="skill span4">
+          <h4>Brand & campaign messaging</h4>
+          <p>Taglines, value propositions, and campaign copy aligned with your brand’s tone of voice and goals.</p>
+        </div>
+        <div class="skill span4">
+          <h4>Content strategy support</h4>
+          <p>Pillars, formats, and publishing cadence that makes sense for your audience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <p class="hlabel">My popular projects</p>
+      <h3 class="sec">Selected case studies</h3>
+
+      <div class="card project">
+        <div class="row">
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Georgian National Tourism Administration (GNTA)</div>
+            <p class="projtext">GNTA is Georgia’s official government body responsible for promoting tourism locally and internationally.</p>
+            <span class="badge">See the content</span>
+
+            <div class="box">
+              <h5>Project overview</h5>
+              <ul>
+                <li>Joined during a website redesign to help launch a new blog section.</li>
+                <li>Wrote <strong>6–8 SEO-focused blogs per month</strong> on destinations, festivals, food, travel tips, and nomad guides.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>My role</h5>
+              <ul>
+                <li>Built content structure and voice for tourist appeal and search performance.</li>
+                <li>Collaborated with SEO, design, and dev teams throughout launch.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>Key results</h5>
+              <ul>
+                <li>~80% of blog posts ranked in the Top 3 for target queries.</li>
+                <li>#1 rankings for competitive searches.</li>
+                <li>Average reading time: 3–5 minutes per article.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="shot">GNTA blog redesign screenshot (add later)</div>
+            <div class="metrics">
+              <div class="metric">
+                <div class="num">300K</div>
+                <div class="lab">Monthly organic traffic</div>
+              </div>
+              <div class="metric">
+                <div class="num">37K</div>
+                <div class="lab">Organic keywords</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="card project">
+        <div class="row">
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Nova</div>
+            <p class="projtext">Construction & renovation materials — content and SEO support across the site.</p>
+            <span class="badge">See the content</span>
+
+            <div class="box">
+              <h5>My role</h5>
+              <ul>
+                <li>Category pages + metadata optimization.</li>
+                <li><strong>50+ SEO blog posts</strong> tailored to Nova’s audience.</li>
+                <li>Conversion copy for <strong>thousands of products</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>Key results</h5>
+              <ul>
+                <li><strong>42×</strong> increase in daily organic traffic.</li>
+                <li><strong>3K</strong> organic keywords.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="shot">Nova visuals / screenshot (add later)</div>
+            <div class="metrics">
+              <div class="metric">
+                <div class="num">42×</div>
+                <div class="lab">Daily organic traffic</div>
+              </div>
+              <div class="metric">
+                <div class="num">3K</div>
+                <div class="lab">Organic keywords</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="card project">
+        <div class="row">
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Europroduct</div>
+            <p class="projtext">Premium supermarket chain — SEO blogs and category content during site revamp.</p>
+            <span class="badge">See the content</span>
+
+            <div class="box">
+              <h5>Key results</h5>
+              <ul>
+                <li>#1 for buyer-intent searches (e.g., “Where to buy crab in Tbilisi”, “Where can you buy mochi”).</li>
+                <li>Top 3 rankings across high-value categories (seafood, cheese, vegan, chocolate).</li>
+                <li>High engagement: a featured article reached <strong>85% scroll depth</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>Metrics</h5>
+              <ul>
+                <li><strong>26K+</strong> monthly organic traffic</li>
+                <li><strong>4K</strong> organic keywords</li>
+                <li><strong>DA 22</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="shot">Europroduct screenshot (add later)</div>
+            <div class="metrics">
+              <div class="metric">
+                <div class="num">26K+</div>
+                <div class="lab">Monthly organic traffic</div>
+              </div>
+              <div class="metric">
+                <div class="num">4K</div>
+                <div class="lab">Organic keywords</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="card project">
+        <div class="row">
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Alpaca</div>
+            <p class="projtext">SEO agency — social media, ad campaigns, and email marketing copy.</p>
+            <span class="badge">See the content</span>
+
+            <div class="box">
+              <h5>Highlights</h5>
+              <ul>
+                <li>Copy supported inbound interest in Alpaca’s free SEO audit offer.</li>
+                <li>Contributed to <strong>35+ new client projects</strong> in 2023.</li>
+                <li>Supported lead conversion across social, email, and site.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="shot">Alpaca campaign samples (add later)</div>
+            <div class="metrics">
+              <div class="metric">
+                <div class="num">35+</div>
+                <div class="lab">New client projects (2023)</div>
+              </div>
+              <div class="metric">
+                <div class="num">—</div>
+                <div class="lab">Email + social conversion support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="brands">
+      <p class="hlabel">Other brands & companies</p>
+      <h3 class="sec">More clients</h3>
+      <p class="subp">Beyond the case studies above, I’ve worked with a wide range of brands on ongoing content, campaigns, and one-off projects.</p>
+      <div class="tags">
+        <span class="tag">Tourism & hospitality brands</span>
+        <span class="tag">Local & international NGOs</span>
+        <span class="tag">Tech & SaaS companies</span>
+        <span class="tag">E-commerce & retail</span>
+        <span class="tag">Education & culture</span>
+      </div>
+      <div class="subp" style="margin-top:12px">
+        Examples: Aldagi, Beka’s School, Studio9, Agrosphere, Diogene, Kärcher Georgia, Clipart, SafCo, RE/MAX, Kuppersberg, Arttime, Smarter, PSP Pharmacy, Big Apple, One Point, Lion Trans, Todua Clinic, Apex Development, Gabuild, Tekto Group.
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <p class="hlabel">Testimonials</p>
+      <h3 class="sec">What collaborators say</h3>
+
+      <div class="grid">
+        <div class="tcard span6">
+          <p>“Working with Beka was both effortless and impactful. What stood out most was his ability to write with clarity, warmth, and a deep understanding of our school’s values. His work helped us better communicate our message and contributed to real growth in interest and enrollments.”</p>
+          <div class="who">— Beka Berikashvili, Founder of “Beka’s School”</div>
+        </div>
+
+        <div class="tcard span6">
+          <p>“Working with Beka was a smooth and productive experience. He joined our team as a freelance content writer and quickly proved himself with clear, well-researched, SEO-optimized articles that brought real value to our blog. He always delivered on time, followed our tone and guidelines, and was proactive in coming up with new content ideas.”</p>
+          <div class="who">— Medea Ghvachliani, Brand Lead at PSP Pharmacy</div>
+        </div>
+
+        <div class="tcard span12">
+          <p>“Beka brings a combination of creative writing skills and deep SEO expertise to every project. His understanding of SEO specifications goes far beyond keyword placement — he truly grasps how to create content that satisfies both search algorithms and human readers.”</p>
+          <div class="who">— Bondo Kavtaradze, Co-CEO of Alpaca</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="footer">
+        <div>
+          <h4>Let’s talk about your next project</h4>
+          <p>Whether you need ongoing content support, a one-off project, or help clarifying your brand messaging, I’d be happy to hear from you.</p>
+          <p style="margin-top:10px">Tell me a bit about your business, what you need written, and your timeline — I’ll get back to you with a clear next step.</p>
+        </div>
+        <div class="meta">
+          <div><strong>Email:</strong> <a href="mailto:bekashatirishvili04@gmail.com">bekashatirishvili04@gmail.com</a></div>
+          <div><strong>Phone:</strong> <a href="tel:+995568810836">+995 568 81 08 36</a></div>
+          <div><strong>LinkedIn:</strong> <a href="#" title="Replace with your LinkedIn URL">linkedin.com/in/your-handle</a></div>
+          <div><strong>Location:</strong> Tbilisi, Georgia (remote-friendly)</div>
+        </div>
+      </div>
+
+      <div class="footnote">© 2025 Beka Shatirishvili • Copywriter</div>
+    </section>
+  </div>
+</body>
+</html>
