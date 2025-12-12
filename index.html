@@ -73,13 +73,21 @@
     .hlabel{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 8px}
     h3.sec{margin:0 0 14px;font-size:22px;font-weight:700}
 
-    .intro{display:grid;grid-template-columns:1.4fr .9fr;gap:20px;align-items:start}
-    .intro .bubble{
-      width:min(260px, 100%);aspect-ratio:1/1;border-radius:999px;border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
-      box-shadow:var(--shadow2);display:flex;align-items:center;justify-content:center;
-      margin:6px auto 0;color:var(--muted);
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12px;text-align:center;padding:18px;
+   .intro .bubble{
+  width:260px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow2);
+  margin:6px auto 0;
+}
+.intro .bubble img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
     }
     .bullets{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;color:var(--ink)}
     .bullets li{margin:10px 0}
@@ -252,12 +260,13 @@
   My work sits at the intersection of content strategy and on-page optimization. I help teams clarify their message, align it with search intent, and turn it into pages that rank, convert, and actually get read.
 </p>
  </div>
-        <div class="bubble">
-         <img
-  src="images/portrait-working.webp"
-  alt="Beka Shatirishvili working on SEO and content strategy"
-  class="mini"
-/>
+       <div class="bubble">
+  <img
+    src="images/portrait-working.webp"
+    alt="Beka Shatirishvili working on SEO and content strategy"
+  />
+</div>
+        
 </div>
       </div>
     </section>
