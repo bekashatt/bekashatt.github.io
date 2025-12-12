@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Beka Shatirishvili — Copywriter & SEO Content Writer</title>
-  <meta name="description" content="Copywriter & SEO Content Writer (English + Georgian). SEO blogs, landing pages, website copy, campaigns. Case studies: GNTA, Nova, Europroduct, Alpaca." />
+  <title>Beka Shatirishvili — Senior Copywriter & On-Page SEO Specialist</title>
+  <meta name="description" content="Senior Copywriter & On-Page SEO Specialist (English + Georgian). Landing pages, SEO content, website copy, campaigns. Case studies: Bloomex, GNTA, Nova, Europroduct, Alpaca." />
+
   <style>
     :root{
       --bg:#f6f2ea;
@@ -17,7 +18,9 @@
       --pill:#f1ede6;
       --accent:#111111;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -25,7 +28,9 @@
       background:var(--bg);
       line-height:1.55;
     }
+
     a{color:inherit}
+
     .wrap{max-width:1040px;margin:0 auto;padding:22px 18px 72px}
 
     .top{display:flex;align-items:center;justify-content:space-between;padding:10px 2px 18px}
@@ -44,9 +49,11 @@
       box-shadow:var(--shadow2);
     }
 
-    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;padding:22px;margin-top:6px}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;padding:22px;margin-top:6px;align-items:start}
     .hero h1{margin:0 0 10px;font-size:28px;line-height:1.15;font-style:italic;font-weight:600}
     .hero p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;max-width:62ch}
+
     .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .pill{
       background:var(--pill);border:1px solid var(--line);
@@ -54,14 +61,35 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       font-size:12.5px;color:var(--ink);
     }
-    .mini{
-      height:70px;border-radius:14px;border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(0,0,0,.04), rgba(0,0,0,.02));
-      display:flex;align-items:center;justify-content:center;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      font-size:12px;color:var(--muted);padding:12px;text-align:center;
+
+    .hero .bubble{
+      width:min(260px, 100%);
+      aspect-ratio:1/1;
+      border-radius:999px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
+      margin:6px auto 0;
+      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
+    }
+    .hero .bubble img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
+    /* If you ever want a small image badge style */
+    img.mini{
+      width:70px;
+      height:70px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      object-fit:cover;
+      display:block;
+    }
+
+    /* TOC */
     .toc{margin-top:18px;padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
     .toc h2{margin:0 0 6px;font-size:18px;font-weight:600}
     .toc p{margin:0;color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px}
@@ -73,26 +101,35 @@
     .hlabel{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 8px}
     h3.sec{margin:0 0 14px;font-size:22px;font-weight:700}
 
-   .intro .bubble{
-  width:260px;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow2);
-  margin:6px auto 0;
-}
-.intro .bubble img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+    /* INTRO (the layout you want) */
+    .intro{
+      display:grid;
+      grid-template-columns:420px 1fr;
+      gap:48px;
+      align-items:center;
     }
+    .intro .bubble{
+      width:420px;
+      aspect-ratio:1/1;
+      border-radius:50%;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
+      margin:0;
+      background:linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
+    }
+    .intro .bubble img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     .bullets{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.6px;color:var(--ink)}
     .bullets li{margin:10px 0}
     .subp{margin:12px 0 0;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13.4px;color:var(--muted);max-width:70ch}
 
+    /* SKILLS GRID */
     .grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:14px}
     .span4{grid-column:span 4}
     .span6{grid-column:span 6}
@@ -106,15 +143,16 @@
     .skill h4{margin:0 0 6px;font-size:13.5px}
     .skill p{margin:0;color:var(--muted);font-size:12.8px}
 
+    /* PROJECTS */
     .project{padding:16px}
     .row{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;align-items:start}
+
     .badge{
       display:inline-block;background:#111;color:#fff;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       font-size:11px;padding:6px 10px;border-radius:999px;
       text-transform:uppercase;letter-spacing:.06em;margin-top:10px;
     }
-    .muted{color:var(--muted);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     .k{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin:0 0 6px}
     .client{font-size:14px;font-weight:700;margin:0 0 6px;letter-spacing:.02em}
     .projtext{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 10px}
@@ -123,27 +161,33 @@
     .box h5{margin:0 0 6px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12.5px}
     .box ul{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12.8px;color:var(--muted)}
     .box li{margin:6px 0}
-    
+
+    /* "shot" is a CONTAINER that centers an image or placeholder text */
     .shot{
-  border:1px solid var(--line);
-  border-radius:14px;
-  background:rgba(255,255,255,.65);
-  height:220px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.65);
+      height:220px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-  box-shadow:var(--shadow2);
-  padding:16px;
-}
+      box-shadow:var(--shadow2);
+      padding:16px;
 
-.shot img{
-  max-width:80%;
-  max-height:80%;
-  object-fit:contain;
-}
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
     }
+    .shot img{
+      max-width:90%;
+      max-height:90%;
+      object-fit:contain;
+      display:block;
+    }
+
     .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
     .metric{
       border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.65);
@@ -152,6 +196,7 @@
     .metric .num{font-size:18px;font-weight:700;font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}
     .metric .lab{margin-top:4px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--muted);font-size:12px}
 
+    /* OTHER CLIENTS TAGS */
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
     .tag{
       background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;
@@ -159,6 +204,7 @@
       font-size:12px;color:var(--muted);box-shadow:var(--shadow2);
     }
 
+    /* TESTIMONIALS */
     .tcard{
       padding:14px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       border-radius:14px;border:1px solid var(--line);
@@ -167,6 +213,7 @@
     .tcard p{margin:0;color:var(--muted);font-size:13px}
     .tcard .who{margin-top:10px;color:var(--ink);font-size:12.5px;font-weight:600}
 
+    /* FOOTER */
     .footer{
       margin-top:24px;background:#121212;color:#fff;border-radius:16px;padding:18px;
       display:grid;grid-template-columns:1.4fr 1fr;gap:16px;
@@ -181,7 +228,8 @@
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .toc{grid-template-columns:1fr}
-      .intro{grid-template-columns:1fr}
+      .intro{grid-template-columns:1fr; gap:18px}
+      .intro .bubble{width:260px;margin:0 auto}
       .row{grid-template-columns:1fr}
       .span4,.span6{grid-column:span 12}
       .footer{grid-template-columns:1fr}
@@ -192,6 +240,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="top">
@@ -207,25 +256,24 @@
       <div>
         <h1>Every brand has a story worth telling —<br/>I bring it to life and make it rank.</h1>
         <p>
-        I’m a <strong>Senior Copywriter & On-Page SEO Specialist</strong>. I turn complex ideas into clear, compelling stories — from long-form content and web copy to SEO articles that are structured to perform.
+          I’m a <strong>Senior Copywriter & On-Page SEO Specialist</strong>. I turn complex ideas into clear, compelling stories — from long-form content and web copy to SEO articles that are structured to perform.
         </p>
+
         <div class="pills">
-  <span class="pill">6+ years of writing experience</span>
-  <span class="pill">On-Page SEO Specialist</span>
-  <span class="pill">50+ clients</span>
-  <span class="pill">English & Georgian</span>
-</div>
-        
- </div>
-    <div class="bubble">
-  <img
-    src="images/portrait-profile.webp"
-    alt="Beka Shatirishvili profile portrait"
-    style="width:100%;height:100%;object-fit:cover;border-radius:50%;"
-  />
-</div>
-      
- </div>
+          <span class="pill">6+ years of writing experience</span>
+          <span class="pill">On-Page SEO Specialist</span>
+          <span class="pill">50+ clients</span>
+          <span class="pill">English & Georgian</span>
+        </div>
+      </div>
+
+      <div class="bubble">
+        <img
+          src="images/portrait-profile.webp"
+          alt="Beka Shatirishvili profile portrait"
+        />
+      </div>
+    </div>
 
     <div class="card toc" id="top">
       <div>
@@ -249,25 +297,25 @@
       <h3 class="sec">What I bring to the table</h3>
 
       <div class="intro">
+        <div class="bubble">
+          <img
+            src="images/portrait-working.webp"
+            alt="Beka Shatirishvili working on SEO and content strategy"
+          />
+        </div>
+
         <div>
-         <ul class="bullets">
-  <li><strong>6+ years of experience</strong> across agencies, media, and freelance projects.</li>
-  <li><strong>50+ clients</strong> — from national brands and NGOs to startups and international companies.</li>
-  <li><strong>Copywriting + On-Page SEO</strong> — content built for clarity, structure, and search performance.</li>
-  <li><strong>15+ industries</strong> including tourism, tech, e-commerce, education, real estate, and culture.</li>
-</ul>
- <p class="subp">
-  My work sits at the intersection of content strategy and on-page optimization. I help teams clarify their message, align it with search intent, and turn it into pages that rank, convert, and actually get read.
-</p>
- </div>
-       <div class="bubble">
-  <img
-    src="images/portrait-working.webp"
-    alt="Beka Shatirishvili working on SEO and content strategy"
-  />
-</div>
-        
-</div>
+          <ul class="bullets">
+            <li><strong>6+ years of experience</strong> across agencies, media, and freelance projects.</li>
+            <li><strong>50+ clients</strong> — from national brands and NGOs to startups and international companies.</li>
+            <li><strong>Copywriting + On-Page SEO</strong> — content built for clarity, structure, and search performance.</li>
+            <li><strong>15+ industries</strong> including tourism, tech, e-commerce, education, real estate, and culture.</li>
+          </ul>
+
+          <p class="subp">
+            My work sits at the intersection of content strategy and on-page optimization. I help teams clarify their message, align it with search intent, and turn it into pages that rank, convert, and actually get read.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -300,67 +348,75 @@
 
       <div style="height:16px"></div>
 
-<div class="card project">
-  <div class="row">
-    <div>
-      <div class="k">Client</div>
-      <div class="client">Bloomex (NZ, AU, CA)</div>
-      <p class="projtext">
-        International flower delivery brand — on-page SEO, content architecture, and large-scale content optimization across multiple markets and micro-brands.
-      </p>
-      <span class="badge">SEO & content work</span>
+      <!-- BLOOMEX -->
+      <div class="card project">
+        <div class="row">
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Bloomex (NZ, AU, CA)</div>
+            <p class="projtext">
+              International flower delivery brand — on-page SEO, content architecture, and large-scale content optimization across multiple markets and micro-brands.
+            </p>
+            <span class="badge">SEO & content work</span>
 
-      <div class="box">
-        <h5>Scope & markets</h5>
-        <ul>
-          <li>Worked across <strong>New Zealand, Australia, and Canada</strong>.</li>
-          <li>SEO support for main Bloomex websites and multiple <strong>micro-brands</strong>.</li>
-          <li>Large-scale content systems with city pages, category pages, and product pages.</li>
-        </ul>
-      </div>
+            <div class="box">
+              <h5>Scope & markets</h5>
+              <ul>
+                <li>Worked across <strong>New Zealand, Australia, and Canada</strong>.</li>
+                <li>SEO support for main Bloomex websites and multiple <strong>micro-brands</strong>.</li>
+                <li>Large-scale content systems with city pages, category pages, and product pages.</li>
+              </ul>
+            </div>
 
-      <div class="box">
-        <h5>My role</h5>
-        <ul>
-          <li>Full <strong>keyword research</strong> and data-driven keyword clustering.</li>
-          <li>Creation of new SEO pages (e.g. flower types, categories, landing pages).</li>
-          <li>Page structure improvements: headings, content layout, and UX alignment.</li>
-          <li>Writing and rewriting content for landing pages, product pages, and blogs.</li>
-          <li>Complete <strong>internal linking strategy</strong> with relevant anchor texts.</li>
-          <li>On-page SEO tasks: meta titles, H1 updates, redirects, and content cleanup.</li>
-          <li>SEO-aligned copy for backlinks and external placements.</li>
-        </ul>
-      </div>
+            <div class="box">
+              <h5>My role</h5>
+              <ul>
+                <li>Full <strong>keyword research</strong> and data-driven keyword clustering.</li>
+                <li>Creation of new SEO pages (e.g. flower types, categories, landing pages).</li>
+                <li>Page structure improvements: headings, content layout, and UX alignment.</li>
+                <li>Writing and rewriting content for landing pages, product pages, and blogs.</li>
+                <li>Complete <strong>internal linking strategy</strong> with relevant anchor texts.</li>
+                <li>On-page SEO tasks: meta titles, H1 updates, redirects, and content cleanup.</li>
+                <li>SEO-aligned copy for backlinks and external placements.</li>
+              </ul>
+            </div>
 
-      <div class="box">
-        <h5>Key results</h5>
-        <ul>
-          <li><strong>+83% increase in organic keywords</strong> in one month (Bloomex NZ).</li>
-          <li>Improved keyword distribution across commercial and category pages.</li>
-          <li>Stronger internal linking and crawl efficiency after structural updates.</li>
-        </ul>
-      </div>
-    </div>
- <div>
-   <img
-  src="images/bloomex-logo.png"
-  alt="Bloomex brand logo"
-  class="shot"
-/>
-      <div class="metrics">
-        <div class="metric">
-          <div class="num">+83%</div>
-          <div class="lab">Organic keywords (1 month)</div>
+            <div class="box">
+              <h5>Key results</h5>
+              <ul>
+                <li><strong>+83% increase in organic keywords</strong> in one month (Bloomex NZ).</li>
+                <li>Improved keyword distribution across commercial and category pages.</li>
+                <li>Stronger internal linking and crawl efficiency after structural updates.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="shot">
+              <img
+                src="images/bloomex-logo.png"
+                alt="Bloomex brand logo"
+              />
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <div class="num">+83%</div>
+                <div class="lab">Organic keywords (1 month)</div>
+              </div>
+              <div class="metric">
+                <div class="num">3</div>
+                <div class="lab">Countries supported</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="metric">
-          <div class="num">3</div>
-          <div class="lab">Countries supported</div>
-        </div>
       </div>
-    </div>
-  </div>
-</div>
- <div class="card project">
+
+      <div style="height:16px"></div>
+
+      <!-- GNTA -->
+      <div class="card project">
         <div class="row">
           <div>
             <div class="k">Client</div>
@@ -412,6 +468,7 @@
 
       <div style="height:16px"></div>
 
+      <!-- NOVA -->
       <div class="card project">
         <div class="row">
           <div>
@@ -456,6 +513,7 @@
 
       <div style="height:16px"></div>
 
+      <!-- EUROPRODUCT -->
       <div class="card project">
         <div class="row">
           <div>
@@ -501,6 +559,7 @@
 
       <div style="height:16px"></div>
 
+      <!-- ALPACA -->
       <div class="card project">
         <div class="row">
           <div>
@@ -590,7 +649,7 @@
         </div>
       </div>
 
-      <div class="footnote">© 2025 Beka Shatirishvili • Copywriter</div>
+      <div class="footnote">© 2025 Beka Shatirishvili • Senior Copywriter & On-Page SEO Specialist</div>
     </section>
   </div>
 </body>
