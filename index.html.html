@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beka Shatirishvili - SEO Specialist & Content Writer | Portfolio</title>
+    <meta name="description" content="SEO specialist and senior content writer with 6+ years experience. Achieved 42x traffic growth for Nova, 80% top-3 rankings for GNTA. Expert in e-commerce SEO, content strategy, and international markets.">
+    <meta name="keywords" content="SEO specialist, content writer, Georgian SEO expert, e-commerce SEO, content strategy, Tbilisi">
+    <meta property="og:title" content="Beka Shatirishvili - SEO & Content Portfolio">
+    <meta property="og:description" content="SEO specialist achieving 42x traffic growth. View case studies from GNTA, Nova, Europroduct and 50+ clients.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://bekashatt.github.io">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a1a1a;
+            --accent: #e63946;
+            --text-light: #666;
+            --bg-light: #fafafa;
+            --border: #e0e0e0;
+            --success: #2a9d8f;
+            --max-width: 1200px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        #hero {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .stat-item {
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-image::before {
+            content: "SEO";
+            position: absolute;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: -0.05em;
+        }
+        
+        .hero-image span {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.5rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            gap: 5rem;
+        }
+        
+        .project {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 3rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project:nth-child(even) {
+            grid-template-columns: 1fr 1.2fr;
+        }
+        
+        .project:nth-child(even) .project-content {
+            order: 2;
+        }
+        
+        .project:nth-child(even) .project-visual {
+            order: 1;
+        }
+        
+        .project-visual {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 300px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .project:nth-child(1) .project-visual {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .project:nth-child(2) .project-visual {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .project:nth-child(3) .project-visual {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .project-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+        }
+        
+        .client-tag {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .result-item {
+            padding: 1rem;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        
+        .result-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .result-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* Skills Section */
+        #skills {
+            background: var(--bg-light);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent) 0%, #d62828 100%);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        /* Companies Section */
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .company-item {
+            padding: 1.5rem;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .company-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .company-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company-type {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            padding: 2.5rem;
+            background: var(--bg-light);
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: """;
+            font-size: 4rem;
+            color: var(--accent);
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        #contact h2 {
+            color: #fff;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+        
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            border-color: var(--accent);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Mobile Responsive */
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                cursor: pointer;
+            }
+            
+            .mobile-menu span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background: var(--primary);
+                margin: 5px 0;
+                transition: 0.3s;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .project {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .project:nth-child(even) .project-content {
+                order: 1;
+            }
+            
+            .project-results {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Beka Shatirishvili</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#companies">Clients</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Every brand has a story worth telling—<br>I bring it to life with the right words.</h1>
+                    <p class="tagline">SEO Specialist & Senior Content Writer</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Clients Served</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Industries</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <span>Beka Shatirishvili<br>SEO Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <!-- GNTA Project -->
+                <div class="project">
+                    <div class="project-content">
+                        <div class="client-tag">Client</div>
+                        <h3>Georgian National Tourism Administration</h3>
+                        <p>Led content strategy for Georgia's official tourism platform redesign. Built the blog section from ground up with 6-8 SEO-optimized articles monthly covering destinations, festivals, and travel tips.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <div class="result-number">80%</div>
+                                <div class="result-label">Posts in Top 3</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">300K+</div>
+                                <div class="result-label">Monthly Traffic</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">#1</div>
+                                <div class="result-label">For Key Searches</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">3-5min</div>
+                                <div class="result-label">Avg. Read Time</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-logo">GNTA<br>Georgia Tourism</div>
+                    </div>
+                </div>
+
+                <!-- Nova Project -->
+                <div class="project">
+                    <div class="project-content">
+                        <div class="client-tag">Client</div>
+                        <h3>Nova - Construction Materials</h3>
+                        <p>Transformed Nova's digital presence through comprehensive SEO strategy. Rewrote category pages, created 50+ blog posts, and optimized thousands of product descriptions.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <div class="result-number">42×</div>
+                                <div class="result-label">Traffic Increase</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">3K+</div>
+                                <div class="result-label">Keywords Ranked</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">1000s</div>
+                                <div class="result-label">Products Optimized</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">Direct</div>
+                                <div class="result-label">Sales Impact</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-logo">NOVA<br>Building Excellence</div>
+                    </div>
+                </div>
+
+                <!-- Europroduct Project -->
+                <div class="project">
+                    <div class="project-content">
+                        <div class="client-tag">Client</div>
+                        <h3>Europroduct - Premium Supermarket</h3>
+                        <p>Developed SEO content strategy for premium European food retailer with 39 branches. Created buyer-intent focused content that dominated local search results.</p>
+                        <div class="project-results">
+                            <div class="result-item">
+                                <div class="result-number">#1</div>
+                                <div class="result-label">Buyer Intent Keywords</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">26K+</div>
+                                <div class="result-label">Monthly Traffic</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">85%</div>
+                                <div class="result-label">Scroll Depth</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">Top 3</div>
+                                <div class="result-label">Category Rankings</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-logo">EUROPRODUCT<br>Premium Quality</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>SEO Strategy</h3>
+                    <p>Comprehensive technical SEO, keyword research, and content optimization. Expert in e-commerce platforms and large-scale migrations.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>Content Writing</h3>
+                    <p>6+ years creating compelling content across 15+ industries. From blog posts to product descriptions, always optimized for both users and search engines.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>E-commerce Optimization</h3>
+                    <p>Specialized in Shopify and WooCommerce. Managing product catalogs with thousands of SKUs, schema markup, and conversion optimization.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>International SEO</h3>
+                    <p>Multi-market expertise across Georgia, US, Australia, and New Zealand. Fluent in English and Georgian content creation.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>Technical Implementation</h3>
+                    <p>Proficient with Screaming Frog, Google Search Console, SEMrush. Managing crawl budgets, canonicals, and site architecture.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"></div>
+                    <h3>Local SEO</h3>
+                    <p>Created unique content for 15,000+ city landing pages. Expert in avoiding duplicate content while maintaining local relevance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies">
+        <div class="container">
+            <h2>Trusted by Leading Brands</h2>
+            <div class="companies-grid">
+                <div class="company-item">
+                    <div class="company-name">Aldagi</div>
+                    <div class="company-type">Insurance Company</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Beka's School</div>
+                    <div class="company-type">Language Learning</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Studio9</div>
+                    <div class="company-type">Architecture</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Agrosphere</div>
+                    <div class="company-type">Agribusiness</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Diogene</div>
+                    <div class="company-type">Publishing House</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Kärcher Georgia</div>
+                    <div class="company-type">Industrial Equipment</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Clipart</div>
+                    <div class="company-type">Digital Agency</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">SafCo Ltd.</div>
+                    <div class="company-type">Health & Safety</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">RE/MAX</div>
+                    <div class="company-type">Real Estate</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Kuppersberg</div>
+                    <div class="company-type">Kitchen Appliances</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">Arttime</div>
+                    <div class="company-type">Swiss Watches</div>
+                </div>
+                <div class="company-item">
+                    <div class="company-name">PSP</div>
+                    <div class="company-type">Pharmacy Chain</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">Working with Beka was both effortless and impactful. What stood out most was his ability to write with clarity, warmth, and a deep understanding of our school's values. His work helped us better communicate our message and contributed to real growth in interest and enrollments.</p>
+                    <div class="testimonial-author">Beka Berikashvili</div>
+                    <div class="testimonial-role">Founder of Beka's School</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">He joined our team as a freelance content writer and quickly proved himself with clear, well-researched, SEO-optimized articles that brought real value to our blog. He always delivered on time, followed our tone and guidelines and was proactive in coming up with new content ideas.</p>
+                    <div class="testimonial-author">Medea Ghvachliani</div>
+                    <div class="testimonial-role">Brand Lead at PSP Pharmacy</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">I can confidently say he is one of the most talented copywriters/SEO Content Writers I've encountered in the industry. Beka brings a combination of creative writing skills and deep SEO expertise to every project. His understanding of SEO specifications goes far beyond keyword placement.</p>
+                    <div class="testimonial-author">Bondo Kavtaradze</div>
+                    <div class="testimonial-role">Co-CEO of Alpaca</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Ready to bring your content vision to life?<br>I'd love to hear about your project.</p>
+                    <p>
+                        <strong>Phone:</strong> <a href="tel:+995568810836">(995) 568-81-08-36</a><br>
+                        <strong>Email:</strong> <a href="mailto:bekashatirishvili04@gmail.com">bekashatirishvili04@gmail.com</a><br>
+                        <strong>Location:</strong> Tbilisi, Georgia
+                    </p>
+                    <a href="mailto:bekashatirishvili04@gmail.com" class="cta-button">Get In Touch</a>
+                </div>
+                <div class="contact-visual">
+                    <p style="opacity: 0.8;">I typically respond within 24-48 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const header = document.querySelector('header');
+            
+            if (scrollTop > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project, .skill-card, .testimonial').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu?.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
