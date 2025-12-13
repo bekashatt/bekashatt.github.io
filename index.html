@@ -318,6 +318,26 @@
   object-fit: contain;
   display: block;
 }
+
+/* --- STOP PAGE FROM GOING WIDE (horizontal overflow fix) --- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { width: 100%; overflow-x: hidden; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Make sure cards/rows never exceed container width */
+.card, .row, .grid { max-width: 100%; }
+
+/* Shots should never spill outside */
+.shot { width: 100%; overflow: hidden; }
+.shot img { width: 100%; height: 100%; object-fit: cover; }
+
+/* If you use chart shots */
+.shot.chart img { object-fit: contain; } /* keeps charts fully visible */
+
   </style>
 </head>
 
