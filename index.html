@@ -338,6 +338,12 @@ img { max-width: 100%; height: auto; display: block; }
 /* If you use chart shots */
 .shot.chart img { object-fit: contain; } /* keeps charts fully visible */
 
+    /* Logos should NEVER be cropped */
+.shot.logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
   </style>
 </head>
 
@@ -548,14 +554,15 @@ img { max-width: 100%; height: auto; display: block; }
             </div>
           </div>
 
-          <div>
-           <div class="shot">
-  <img
-    src="images/gnta-logo.webp"
-    alt="Georgian National Tourism Administration logo"
-  />
+     <div>
+  <div class="shot logo">
+    <img
+      src="images/gnta-logo.webp"
+      alt="Georgian National Tourism Administration logo"
+    />
+  </div>
 </div>
-            <div class="metrics">
+          <div class="metrics">
               <div class="metric">
                 <div class="num">300K</div>
                 <div class="lab">Monthly organic traffic</div>
