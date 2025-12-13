@@ -298,6 +298,15 @@
   font-size:14px;
   opacity:.75;
 }
+ /* Charts should never be cropped */
+.shot.chart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+}
+
   </style>
 </head>
 
@@ -617,25 +626,13 @@
   </div>
       
 <!-- Growth chart -->
-  <div class="shot fill" style="margin-top:12px;height:220px">
-    <img
-      src="images/europroduct-growth.png"
-      alt="Europroduct SEO growth chart"
-    />
-  </div>
-
-
-  <!-- Metrics -->
-  <div class="metrics">
-    <div class="metric">
-      <div class="num">26K+</div>
-      <div class="lab">Monthly organic traffic</div>
-    </div>
-    <div class="metric">
-      <div class="num">4K</div>
-      <div class="lab">Organic keywords</div>
-    </div>
-  </div>
+ <div class="shot chart" style="margin-top:12px;height:260px">
+  <img
+    src="images/europroduct-growth.png"
+    alt="Europroduct SEO growth chart"
+  />
+</div>
+      
 </div>
 
         </div> <!-- end .row -->
