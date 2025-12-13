@@ -306,7 +306,18 @@
   display: block;
   background: #fff;
 }
+    
+/* Chart / graph shots – show full image, no crop */
+.shot.chart {
+  height: auto;
+}
 
+.shot.chart img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
   </style>
 </head>
 
@@ -602,7 +613,7 @@
             <p class="projtext">
   Premium supermarket chain — I worked with my team on SEO content and category strategy during a full site revamp.
   After launch, organic traffic grew from <strong>0 → 26K+/month</strong>, domain authority from
-  <strong>0 → 22</strong>, and keyword count to <strong>4K+</strong>.
+  <strong>0 → 22</strong>, and keyword count to <strong>2K+</strong>.
 </p>
             <a class="badge" href="https://europroduct.ge/blog/page-5" target="_blank" rel="noopener">See the content</a>
 
@@ -626,7 +637,7 @@
   </div>
       
 <!-- Growth chart -->
- <div class="shot chart" style="margin-top:12px;height:260px">
+ <div class="shot chart" style="margin-top:12px">
   <img
     src="images/europroduct-growth.png"
     alt="Europroduct SEO growth chart"
