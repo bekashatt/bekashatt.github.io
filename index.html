@@ -238,6 +238,15 @@
       .metrics{grid-template-columns:1fr}
       .hero h1{font-size:24px}
     }
+/* ONLY Nova & Europroduct fill behavior */
+.shot.fill img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  max-width:none;
+  max-height:none;
+}
   </style>
 </head>
 
@@ -502,8 +511,8 @@
 
          <div>
   <!-- Image -->
-  <div class="shot">
-    <img
+  <div class="shot fill">
+ <img
       src="images/nova-project.webp"
       alt="Nova construction project visuals"
     />
@@ -556,8 +565,8 @@
 
     <div>
   <!-- Image -->
-  <div class="shot">
-    <img
+ <div class="shot fill">
+  <img
       src="images/europroduct-brand-visual.webp"
       alt="Europroduct brand visuals"
     />
