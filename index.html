@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Beka Shatirishvili — Senior Copywriter & On-Page SEO Specialist</title>
-  <meta name="description" content="Senior Copywriter & On-Page SEO Specialist (English + Georgian). Landing pages, SEO content, website copy, campaigns. Case studies: Bloomex, GNTA, Nova, Europroduct, Alpaca." />
+  <meta name="description" content="Senior Copywriter & On-Page SEO Specialist (English + Georgian). Landing pages, SEO content, website copy, campaigns. Case studies: Bloomex, GNTA, Nova, Europroduct." />
 
   <style>
     :root{
@@ -79,16 +79,6 @@
       display:block;
     }
 
-    /* If you ever want a small image badge style */
-    img.mini{
-      width:70px;
-      height:70px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      object-fit:cover;
-      display:block;
-    }
-
     /* TOC */
     .toc{margin-top:18px;padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
     .toc h2{margin:0 0 6px;font-size:18px;font-weight:600}
@@ -101,7 +91,7 @@
     .hlabel{font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:var(--muted);margin:0 0 8px}
     h3.sec{margin:0 0 14px;font-size:22px;font-weight:700}
 
-    /* INTRO (the layout you want) */
+    /* INTRO */
     .intro{
       display:grid;
       grid-template-columns:420px 1fr;
@@ -145,7 +135,10 @@
 
     /* PROJECTS */
     .project{padding:16px}
-    .row{display:grid;grid-template-columns:1fr 1.2fr;gap:16px;align-items:start}
+    .row{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start}
+    
+    /* REVERSED ROW for variety (Image Left, Text Right) */
+    .row.reversed{display:grid; grid-template-columns: 1.2fr 1fr; gap: 24px;}
 
     .badge{
       display:inline-block;background:#111;color:#fff;
@@ -162,31 +155,26 @@
     .box ul{margin:0;padding-left:18px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12.8px;color:var(--muted)}
     .box li{margin:6px 0}
 
-    /* "shot" is a CONTAINER that centers an image or placeholder text */
+    /* SHOTS & IMAGES */
     .shot{
       border:1px solid var(--line);
       border-radius:14px;
       background:rgba(255,255,255,.65);
       height:220px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
+      display:flex;align-items:center;justify-content:center;
       box-shadow:var(--shadow2);
       padding:16px;
-
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--muted);
-      font-size:12px;
-      text-align:center;
+      color:var(--muted);font-size:12px;text-align:center;
+      width: 100%; overflow: hidden;
     }
-    .shot img{
-      max-width:90%;
-      max-height:90%;
-      object-fit:contain;
-      display:block;
-    }
+    .shot img{max-width:90%; max-height:90%; object-fit:contain; display:block;}
+
+    /* Special Shot Types */
+    .shot.fill img{width:100%; height:100%; object-fit:cover; display:block; max-width:none; max-height:none;}
+    .shot.chart {height: auto;}
+    .shot.chart img {width: 100%; height: auto; object-fit: contain; display: block; background: #fff;}
+    .shot.logo img{width:100%; height:100%; object-fit:contain !important;}
 
     .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
     .metric{
@@ -196,7 +184,7 @@
     .metric .num{font-size:18px;font-weight:700;font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}
     .metric .lab{margin-top:4px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--muted);font-size:12px}
 
-    /* OTHER CLIENTS TAGS */
+    /* TAGS */
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
     .tag{
       background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;
@@ -204,7 +192,7 @@
       font-size:12px;color:var(--muted);box-shadow:var(--shadow2);
     }
 
-    /* TESTIMONIALS */
+    /* TESTIMONIALS & CLIENTS */
     .tcard{
       padding:14px;font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       border-radius:14px;border:1px solid var(--line);
@@ -212,6 +200,15 @@
     }
     .tcard p{margin:0;color:var(--muted);font-size:13px}
     .tcard .who{margin-top:10px;color:var(--ink);font-size:12.5px;font-weight:600}
+    .t-meta{display:flex;align-items:center;gap:10px;margin-top:14px;}
+    .t-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 52px;border:1px solid var(--line);}
+    .t-link{color:inherit;text-decoration:underline;text-underline-offset:3px;} 
+
+    .clients-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(220px,1fr));gap:28px;margin-top:24px;}
+    .client-item{text-align:center;}
+    .client-item img{width:100%;height:120px;object-fit:contain;margin-bottom:14px;}
+    .client-name{font-size:18px;font-weight:600;margin-bottom:4px;}
+    .client-desc{font-size:14px;opacity:.75;}
 
     /* FOOTER */
     .footer{
@@ -225,12 +222,28 @@
     .footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
     .footnote{text-align:center;color:rgba(0,0,0,.45);font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:12px;margin-top:18px}
 
+    /* CASE STUDY SEPARATORS */
+    .case-divider {
+      margin: 100px 0 40px; /* INCREASED TO 100px FOR BREATHING ROOM */
+      border-top: 1px solid rgba(0,0,0,.15);
+    }
+    .case-chapter {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .toc{grid-template-columns:1fr}
       .intro{grid-template-columns:1fr; gap:18px}
       .intro .bubble{width:260px;margin:0 auto}
-      .row{grid-template-columns:1fr}
+      .row, .row.reversed{grid-template-columns:1fr} /* Stack everything on mobile */
       .span4,.span6{grid-column:span 12}
       .footer{grid-template-columns:1fr}
     }
@@ -238,133 +251,6 @@
       .metrics{grid-template-columns:1fr}
       .hero h1{font-size:24px}
     }
-/* ONLY Nova & Europroduct fill behavior */
-.shot.fill img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  max-width:none;
-  max-height:none;
-}
- /* Testimonials: avatar + linked name */
-.t-meta{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-top:14px;
-}
-
-.t-avatar{
-  width:52px;
-  height:52px;
-  border-radius:50%;
-  object-fit:cover;
-  flex:0 0 52px;
-  border:1px solid var(--line);
-}
-
-.t-link{
-  color:inherit;
-  text-decoration:underline;
-  text-underline-offset:3px;
-} 
-
-.clients-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
-  gap:28px;
-  margin-top:24px;
-}
-
-.client-item{
-  text-align:center;
-}
-
-.client-item img{
-  width:100%;
-  height:120px;
-  object-fit:contain;
-  margin-bottom:14px;
-}
-
-.client-name{
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:4px;
-}
-
-.client-desc{
-  font-size:14px;
-  opacity:.75;
-}
- /* Charts should never be cropped */
-.shot.chart img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background: #fff;
-}
-    
-/* Chart / graph shots – show full image, no crop */
-.shot.chart {
-  height: auto;
-}
-
-.shot.chart img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* --- STOP PAGE FROM GOING WIDE (horizontal overflow fix) --- */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-html, body { width: 100%; overflow-x: hidden; }
-
-img { max-width: 100%; height: auto; display: block; }
-
-/* Make sure cards/rows never exceed container width */
-.card, .row, .grid { max-width: 100%; }
-
-/* Shots should never spill outside */
-.shot { width: 100%; overflow: hidden; }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
-
-/* If you use chart shots */
-.shot.chart img { object-fit: contain; } /* keeps charts fully visible */
-
-    /* Logos should NEVER be cropped */
-.shot.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-    /* Logos should never crop */
-.shot.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain !important;
-}
-    /* Case study chapter divider */
-.case-divider {
-  margin: 48px 0 40px;
-  border-top: 1px solid rgba(0,0,0,.3);
-}
-
-.case-chapter {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin-bottom: 14px;
-}
   </style>
 </head>
 
@@ -380,11 +266,10 @@ img { max-width: 100%; height: auto; display: block; }
 
     <div class="card hero">
       <div>
-<h1>I bridge the gap between creative copywriting and technical On-Page SEO.</h1>
-        
-    <p>
-      I’m a <strong>Senior Copywriter & On-Page SEO Specialist</strong>. My process goes beyond storytelling — I optimize <strong>site architecture</strong>, <strong>internal linking</strong>, and <strong>content depth</strong> to ensure your brand doesn't just look good, but ranks at the top of the SERPs.
-    </p>
+        <h1>I drive organic growth by fusing technical SEO with creative content strategy.</h1>
+        <p>
+          I’m a <strong>Senior Copywriter & On-Page SEO Specialist</strong>. My process goes beyond storytelling — I optimize <strong>site architecture</strong>, <strong>internal linking</strong>, and <strong>content depth</strong> to ensure your brand doesn't just look good, but ranks at the top of the SERPs.
+        </p>
         <div class="pills">
           <span class="pill">6+ years of writing experience</span>
           <span class="pill">On-Page SEO Specialist</span>
@@ -394,10 +279,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <div class="bubble">
-        <img
-          src="images/portrait-profile.webp"
-          alt="Beka Shatirishvili profile portrait"
-        />
+        <img src="images/portrait-profile.webp" alt="Beka Shatirishvili profile portrait" />
       </div>
     </div>
 
@@ -424,10 +306,7 @@ img { max-width: 100%; height: auto; display: block; }
 
       <div class="intro">
         <div class="bubble">
-          <img
-            src="images/portrait-working.webp"
-            alt="Beka Shatirishvili working on SEO and content strategy"
-          />
+          <img src="images/portrait-working.webp" alt="Beka Shatirishvili working on SEO and content strategy" />
         </div>
 
         <div>
@@ -449,32 +328,26 @@ img { max-width: 100%; height: auto; display: block; }
       <p class="hlabel">Skills & Expertise</p>
       <h3 class="sec">What I do</h3>
       <div class="grid">
-        
-       <div class="skill span4">
+        <div class="skill span4">
           <h4>Technical On-Page Optimization</h4>
           <p>Optimizing H-tag hierarchy, URL slugs, meta tags, internal link anchors, and schema for maximum crawlability.</p>
         </div>
-        
         <div class="skill span4">
           <h4>SEO Content & Topical Authority</h4>
           <p>Building pillar pages and cluster content that establishes expertise, satisfies search intent, and drives organic traffic.</p>
         </div>
-
         <div class="skill span4">
           <h4>Website & Landing Page Copy</h4>
           <p>Messaging hierarchy, clear value propositions, and UX-aligned micro-copy built specifically to convert.</p>
         </div>
-
         <div class="skill span6">
           <h4>Content Strategy & Keyword Research</h4>
           <p>Data-driven keyword clustering, competitor gap analysis, and content roadmaps that target low-difficulty, high-value terms.</p>
         </div>
-
         <div class="skill span6">
           <h4>Creative Writing & Storytelling</h4>
           <p>Going beyond the keywords to craft distinct brand voices, engaging narratives, and long-form stories that resonate with human readers.</p>
         </div>
-
       </div>
     </section>
 
@@ -484,369 +357,301 @@ img { max-width: 100%; height: auto; display: block; }
 
       <div style="height:16px"></div>
       
-<div class="case-chapter">01 — In-House SEO at Scale (Bloomex)</div>
-
-      <!-- BLOOMEX -->
-     <div class="card project">
-  <div class="row">
-    
-    <div style="display:flex; flex-direction:column; gap:14px;">
-      <div>
-        <div class="k">Client</div>
-        <div class="client">Bloomex (Australia, New Zealand, Canada)</div>
-        
-        <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
-          International flower delivery company operating across multiple markets. As part of the SEO team, I've led content expansion strategies that drove significant organic growth across three key regions. </p>
-
-        <div class="box" style="margin-bottom:14px">
-          <h5>My Role & Strategy</h5>
-          <ul>
-            <li><strong>Large-Scale Keyword Clustering:</strong> Identified thousands of low-difficulty/high-intent variations for "hampers," "roses," "gift baskets", and many more across AU, NZ, and CA.</li>
-            <li><strong>Content Architecture:</strong> Developed scalable content frameworks for regional and city-specific pages, optimized category hierarchies, and strengthened internal linking structures to improve crawlability and topical authority..</li>
-            <li><strong>On-Page Optimization:</strong> Conducted comprehensive audits and rewrites across product pages, category pages, and landing pages—aligning H-tags, meta titles, descriptions, and content with user intent to boost CTR and rankings..</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h5>Key Results (Nov 2025)</h5>
-          <ul>
-            <li><strong>Bloomex NZ:</strong> +83% increase in ranking keywords in just one month. <strong>(Screen 1)</strong></li>
-            <li><strong>Bloomex NZ:</strong> 3x growth in Click-Through Rate (1.4% → 3.9%) and 3x total clicks year-over-year. <strong>(Screen 2)</strong></li>
-            <li><strong>Bloomex AU:</strong> +56% increase in organic traffic & +22% total keyword reach. <strong>(Screen 3)</strong></li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <div class="shot chart">
-          <img
-            src="images/semrushaustralia.webp"
-            alt="Bloomex Australia Traffic Growth"
-          />
-        </div>
-        <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
-          Screen 3: AU Traffic Growth
-        </div>
-      </div>
-    </div> 
-    <div style="display:flex; flex-direction:column; gap:20px;">
-      
-      <div class="shot logo">
-        <img
-          src="images/bloomex-logo.png"
-          alt="Bloomex brand logo"
-        />
-      </div>
-
-      <div>
-        <div class="shot chart">
-          <img
-            src="images/bloomexnzkeywords.webp"
-            alt="Bloomex NZ Keyword Growth"
-          />
-        </div>
-        <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
-          Screen 1: NZ Keyword Surge
-        </div>
-      </div>
-
-      <div>
-        <div class="shot chart">
-          <img
-            src="images/searchconsole.webp"
-            alt="Bloomex NZ Search Console Performance"
-          />
-        </div>
-        <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
-          Screen 2: CTR & Clicks (GSC)
-        </div>
-      </div>
-
-    </div>
-    </div> </div> 
-
-      <div class="case-divider"></div>
-<div class="case-chapter">02 — Government & Tourism Platform (GNTA)</div>
-    <!-- GNTA -->
-<div class="card project">
-  <div class="row">
-    <div>
-      <div class="k">Client</div>
-      <div class="client">Georgian National Tourism Administration (GNTA)</div>
-
-      <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
-        GNTA is Georgia’s official government body responsible for promoting the country as a travel destination internationally.
-      </p>
-
-      <p class="projtext">
-        I worked on this project as part of the Alpaca SEO team during a major website redesign, where my role went beyond content creation - focusing on on-page SEO, content structure, and scalable editorial systems designed to grow organic visibility long-term.
-      </p>
-
-      <a class="badge" href="https://georgia.travel/blog?page_id=12&page=5" target="_blank" rel="noopener">See the content</a>
-
-      <div class="box">
-        <h5>My Role & On-Page SEO Strategy</h5>
-        <ul>
-          <li><strong>On-page SEO execution:</strong> Implemented page-level optimization across new and existing blog templates during the redesign.</li>
-          <li><strong>Content structure:</strong> Built repeatable article frameworks aligned with search intent, readability, and topical depth.</li>
-          <li><strong>Metadata & hierarchy:</strong> Optimized H-tag structure, titles/descriptions, and internal linking paths in collaboration with the SEO and dev teams.</li>
-          <li><strong>SEO content production:</strong> Wrote <strong>6–8 long-form SEO blogs per month</strong> covering destinations, festivals, food, travel tips, and nomad guides.</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h5>Impact & Results (2023–2025)</h5>
-        <ul>
-          <li><strong>Organic traffic:</strong> ~50K → <strong>300K+</strong> monthly organic traffic by 2025.</li>
-          <li><strong>Keyword visibility:</strong> ~10K → <strong>30K+</strong> ranking keywords.</li>
-          <li>~<strong>80%</strong> of published articles reached <strong>Top 3</strong> positions for their target queries.</li>
-          <li>Regular <strong>#1 rankings</strong> for competitive destination and travel-related searches.</li>
-          <li><strong>Engagement:</strong> 3–5 minutes average reading time per article.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <div class="shot logo">
-        <img src="images/gnta-logo.webp" alt="Georgian National Tourism Administration logo" />
-      </div>
-
-      <div style="margin-top:12px">
-        <div class="shot chart">
-          <img src="images/gnta-keywords.jpg" alt="GNTA keyword growth chart" />
-        </div>
-        <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
-          Screen 1: Keyword Growth
-        </div>
-      </div>
-
-      <div style="margin-top:12px">
-        <div class="shot chart">
-          <img src="images/gnta-traffic.jpg" alt="GNTA organic traffic growth chart" />
-        </div>
-        <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
-          Screen 2: Organic Traffic Growth
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <div class="case-divider"></div>
-<div class="case-chapter">03 — Long-Term SEO Growth (Nova)</div>
-   <!-- NOVA -->
-<!-- NOVA -->
-<div class="card project">
-  <div class="row">
-
-    <!-- LEFT COLUMN (text) - vertically centered -->
-    <div style="display:flex; flex-direction:column; justify-content:center;">
-      <div class="k">Client</div>
-      <div class="client">Nova</div>
-
-      <p class="projtext">Construction & renovation materials retailer — comprehensive SEO overhaul and ongoing content strategy.</p>
-
-      <p class="projtext">
-        My team and I started working with Nova in <strong>2021</strong>. Over three years of continuous collaboration, we transformed the site from minimal organic presence into a major traffic driver with <strong>42× growth in daily organic visitors</strong> and expansion to <strong>2.8K+ ranking keywords</strong>.
-      </p>
-
-      <div class="box">
-        <h5>My Role & Strategy</h5>
-        <ul>
-          <li><strong>Keyword Research & Mapping:</strong> Built extensive keyword database across product categories, use cases, and informational queries.</li>
-          <li><strong>Technical SEO & Site Structure:</strong> Resolved critical technical issues and restructured product categorization for better crawlability.</li>
-          <li><strong>On-Page Optimization:</strong> Wrote optimized metadata and rich category content to eliminate thin content issues.</li>
-          <li><strong>Content Hub Strategy:</strong> Built content ecosystems around strategic pages through pillar posts and internal linking.</li>
-          <li><strong>Blog & Educational Content:</strong> Published ongoing SEO blog content targeting informational queries and top-of-funnel traffic.</li>
-        </ul>
-      </div>
-
-      <p class="projtext" style="margin-top:12px; font-weight:600">
-        <strong>Impact:</strong> This sustained growth strengthened Nova's backlink profile and contributed directly to measurable increases in online sales.
-      </p>
-    </div>
-
-    <!-- RIGHT COLUMN (images) - swapped order -->
-    <div>
-      <div class="shot fill">
-        <img src="images/nova-project.webp" alt="Nova construction project visuals" />
-      </div>
-
-      <div class="shot chart" style="margin-top:12px">
-        <img src="images/nova-project-2021.webp" alt="Nova SEO growth since 2021" />
-      </div>
-
-      <div class="shot chart" style="margin-top:12px">
-        <img src="images/nova-organic-traffic.jpg" alt="Nova organic traffic growth" />
-      </div>
-    </div>
-
-  </div> <!-- end .row -->
-</div> <!-- end .card -->
-
-      <div class="case-divider"></div>
-<div class="case-chapter">04 — E-Commerce SEO from Zero (Europroduct)</div>
-      <!-- EUROPRODUCT -->
+      <div class="case-chapter">01 — In-House Enterprise SEO (Bloomex)</div>
 
       <div class="card project">
-  <div class="row">
-    
-    <div style="display:flex; flex-direction:column; justify-content:center;">
-      <div class="k">Client</div>
-      <div class="client">Europroduct</div>
-      
-      <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
-        We started from absolute zero: 0 organic traffic, 0 Domain Authority, and 0 indexed pages.
-      </p>
+        <div class="row">
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <div class="k">Client</div>
+              <div class="client">Bloomex (Australia, New Zealand, Canada)</div>
+              
+              <div style="font-size:10px; font-weight:700; color:#111; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em; border:1px solid #ddd; display:inline-block; padding:4px 8px; border-radius:4px; background:#fff;">
+                Role: Full-Time In-House SEO Specialist
+              </div>
 
-      <p class="projtext">
-        To launch this brand online, I led the <strong>on-page content strategy</strong>. While the technical team built the site infrastructure, I focused on populating it with high-value, structured content. I ensured category pages weren't just products, but rich semantic resources that Google could understand and rank.
-      </p>
-
-      <div class="box">
-        <h5>My On-Page Strategy</h5>
-        <ul>
-          <li><strong>Content Depth:</strong> Solved "thin content" issues by writing rich descriptions for every major category.</li>
-          <li><strong>Trend Monetization:</strong> Identified the rising "Mochi" trend and created targeted pages that captured #1 rankings immediately.</li>
-          <li><strong>Internal Linking:</strong> Built a "Recipes" content hub to drive traffic directly to product pages.</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h5>Results</h5>
-        <ul>
-          <li><strong>0 → 26K+</strong> monthly organic traffic.</li>
-          <li><strong>0 → 22</strong> Domain Authority (DA) via content-led backlinks (Forbes.ge, Wikipedia).</li>
-          <li>Ranked #1 for high-intent keywords (Seafood, Mochi, Vegan).</li>
-        </ul>
-      </div>
-    </div> 
-    <div>
-      <div class="shot fill">
-        <img
-          src="images/europroduct-brand-visual.webp"
-          alt="Europroduct brand visuals"
-        />
-      </div>
-      
-      <div class="shot chart" style="margin-top:12px">
-        <img
-          src="images/europroduct-growth.png"
-          alt="Europroduct SEO growth chart"
-        />
-      </div>
-    </div>
-
-  </div> </div>
-      
-        <!-- LOCAL MEDIA / PUBLISHING (add right after Alpaca) -->
-<div style="height:16px"></div>
-
-<section id="media">
-  <p class="hlabel">Freelance writing</p>
-  <h3 class="sec">Freelance Projects with Local Online Media</h3>
-
-  <div class="card project">
-    <div class="row">
-      <!-- TEXT -->
-      <div>
-        <p class="projtext" style="margin-top:2px">
-          Alongside my client work, I’ve contributed to independent media platforms and NGOs, including
-          <strong>Indigo</strong>, <strong>Publika</strong>, AT.ge, Liberali, and the Equality Movement.
-          My most consistent involvement has been with <strong>Indigo</strong> and <strong>Publika</strong>,
-          where I’ve published long-form articles, essays, interviews, and cultural commentary.
-        </p>
-
-        <div class="box">
-          <h5>Topics I’ve explored</h5>
-          <ul>
-            <li><strong>Labor and class in Georgia</strong>, including lived experiences of low-income workers.</li>
-            <li><strong>Music journalism</strong>, covering local artists and global subcultures.</li>
-            <li><strong>Masculinity, gender, and queerness</strong>, often through personal or collective identity.</li>
-            <li><strong>Cultural criticism and storytelling</strong> about life in Georgia beyond the mainstream narrative.</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h5>Results</h5>
-          <ul>
-            <li>
-              Indigo blog on Kutaisi music event → <strong>Top 5 most-read</strong> blog of the year
-              — <a href="https://indigo.com.ge/articles/ghame-kutaisshi" target="_blank" rel="noopener">read</a>
-            </li>
-            <li>
-              Labor rights story based on my personal experience → <strong>2nd most-read</strong> Indigo article at the time
-              — <a href="https://publika.ge/article/karfuris-bneli-mkhare/" target="_blank" rel="noopener">read</a>
-            </li>
-            <li><strong>4–6 min</strong> average time-on-page (well above typical editorial benchmarks).</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- VISUALS -->
-      <div>
-        <div class="grid" style="grid-template-columns:repeat(12, 1fr); gap:14px">
-          <!-- Indigo card -->
-          <div class="card span12" style="overflow:hidden">
-            <div style="height:210px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.65)">
-  <img
-    src="images/indigo.png"
-    alt="Indigo — author work cover"
-    style="width:100%;height:100%;object-fit:cover;display:block"
-  />
-</div>
-            <div style="padding:14px;text-align:center">
-              <div class="client" style="margin:0">Indigo</div>
-              <p class="projtext" style="margin:8px 0 0">
-                Long-form writing across culture, society, and everyday life in Georgia.
+              <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
+                International flower delivery company operating across multiple markets. As part of the SEO team, I've led content expansion strategies that drove significant organic growth across three key regions. 
               </p>
-              <a class="badge"
-                 href="https://indigo.com.ge/authors/beka-shatirishvili"
-                 target="_blank" rel="noopener"
-                 style="text-decoration:none;display:inline-block;margin-top:10px">
-                View author page
-              </a>
+
+              <div class="box" style="margin-bottom:14px">
+                <h5>My Role & Strategy</h5>
+                <ul>
+                  <li><strong>Large-Scale Keyword Clustering:</strong> Identified thousands of low-difficulty/high-intent variations for "hampers," "roses," "gift baskets", and many more.</li>
+                  <li><strong>Content Architecture:</strong> Engineered scalable content frameworks for regional pages, enabling mass deployment of <strong>15,000+ landing pages</strong>.</li>
+                  <li><strong>On-Page Optimization:</strong> Conducted audits and rewrites across product pages and category pages—aligning H-tags and metadata with user intent to boost CTR.</li>
+                </ul>
+              </div>
+
+              <div class="box">
+                <h5>Key Results (Nov 2025)</h5>
+                <ul>
+                  <li><strong>Bloomex NZ:</strong> <strong>+83% increase</strong> in ranking keywords in just one month. <strong>(Screen 1)</strong></li>
+                  <li><strong>Bloomex NZ:</strong> <strong>3x growth</strong> in Click-Through Rate (1.4% → 3.9%) and <strong>3x total clicks</strong> year-over-year. <strong>(Screen 2)</strong></li>
+                  <li><strong>Bloomex AU:</strong> <strong>+56% increase</strong> in organic traffic & <strong>+22%</strong> total keyword reach. <strong>(Screen 3)</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="shot chart">
+                <img src="images/semrushaustralia.webp" alt="Bloomex Australia Traffic Growth" />
+              </div>
+              <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+                Screen 3: AU Traffic Growth
+              </div>
+            </div>
+          </div> 
+          
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="shot logo">
+              <img src="images/bloomex-logo.png" alt="Bloomex brand logo" />
+            </div>
+
+            <div>
+              <div class="shot chart">
+                <img src="images/bloomexnzkeywords.webp" alt="Bloomex NZ Keyword Growth" />
+              </div>
+              <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+                Screen 1: NZ Keyword Surge
+              </div>
+            </div>
+
+            <div>
+              <div class="shot chart">
+                <img src="images/searchconsole.webp" alt="Bloomex NZ Search Console Performance" />
+              </div>
+              <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+                Screen 2: CTR & Clicks (GSC)
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div> 
+
+      <div class="case-divider"></div>
+      <div class="case-chapter">02 — Government & Destination Marketing (GNTA)</div>
+      
+      <div class="card project">
+        <div class="row reversed">
+          
+          <div>
+            <div class="shot logo">
+              <img src="images/gnta-logo.webp" alt="Georgian National Tourism Administration logo" />
+            </div>
+
+            <div style="margin-top:12px">
+              <div class="shot chart">
+                <img src="images/gnta-keywords.jpg" alt="GNTA keyword growth chart" />
+              </div>
+              <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+                Screen 1: Keyword Growth
+              </div>
+            </div>
+
+            <div style="margin-top:12px">
+              <div class="shot chart">
+                <img src="images/gnta-traffic.jpg" alt="GNTA organic traffic growth chart" />
+              </div>
+              <div style="text-align:center; font-size:11px; font-weight:bold; color:var(--muted); margin-top:6px; letter-spacing:0.05em; text-transform:uppercase;">
+                Screen 2: Organic Traffic Growth
+              </div>
             </div>
           </div>
 
-          <!-- Publika card -->
-          <div class="card span12" style="overflow:hidden">
-       <div style="height:210px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.65)">
-  <img
-    src="images/publika.png"
-    alt="Publika — author work cover"
-    style="width:100%;height:100%;object-fit:cover;display:block"
-  />
-</div>
-            <div style="padding:14px;text-align:center">
-              <div class="client" style="margin:0">Publika</div>
-              <p class="projtext" style="margin:8px 0 0">
-                Socio-political journalism with a focus on lived experience and human stories.
+          <div>
+            <div class="k">Client</div>
+            <div class="client">Georgian National Tourism Administration (GNTA)</div>
+
+            <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
+              GNTA is Georgia’s official government body responsible for promoting the country as a travel destination internationally.
+            </p>
+
+            <p class="projtext">
+              I worked on this project as part of the Alpaca SEO team during a major website redesign. My role focused on on-page SEO, content structure, and scalable editorial systems designed to grow organic visibility long-term.
+            </p>
+
+            <a class="badge" href="https://georgia.travel/blog?page_id=12&page=5" target="_blank" rel="noopener">See the content</a>
+
+            <div class="box">
+              <h5>My Role & On-Page SEO Strategy</h5>
+              <ul>
+                <li><strong>On-page SEO execution:</strong> Implemented page-level optimization across new and existing blog templates.</li>
+                <li><strong>Content structure:</strong> Built repeatable article frameworks aligned with search intent and topical depth.</li>
+                <li><strong>Metadata & hierarchy:</strong> Optimized H-tag structure, titles/descriptions, and internal linking paths.</li>
+                <li><strong>SEO content production:</strong> Wrote <strong>6–8 long-form SEO blogs per month</strong> covering destinations and travel tips.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>Impact & Results (2023–2025)</h5>
+              <ul>
+                <li><strong>Organic traffic:</strong> ~50K → <strong>300K+ monthly organic traffic</strong> by 2025.</li>
+                <li><strong>Keyword visibility:</strong> ~10K → <strong>30K+ ranking keywords</strong>.</li>
+                <li>~<strong>80%</strong> of published articles reached <strong>Top 3 positions</strong> for their target queries.</li>
+                <li>Regular <strong>#1 rankings</strong> for competitive destination searches.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="case-divider"></div>
+      <div class="case-chapter">03 — Retail & Home Improvement (Nova)</div>
+      
+      <div class="card project">
+        <div class="row">
+          <div style="display:flex; flex-direction:column; justify-content:center;">
+            <div class="k">Client</div>
+            <div class="client">Nova</div>
+
+            <p class="projtext">Construction & renovation materials retailer — comprehensive SEO overhaul and ongoing content strategy.</p>
+
+            <p class="projtext">
+              My team and I started working with Nova in <strong>2021</strong>. Over three years, we transformed the site from minimal organic presence into a major traffic driver with <strong>42× growth in daily organic visitors</strong> and expansion to <strong>2.8K+ ranking keywords</strong>.
+            </p>
+
+            <div class="box">
+              <h5>My Role & Strategy</h5>
+              <ul>
+                <li><strong>Technical SEO & Site Structure:</strong> Restructured product categorization for better crawlability.</li>
+                <li><strong>On-Page Optimization:</strong> Wrote optimized metadata and rich category content to eliminate "thin content" issues.</li>
+                <li><strong>Content Hub Strategy:</strong> Built content ecosystems around strategic pages through pillar posts.</li>
+                <li><strong>Blog & Educational Content:</strong> Published ongoing SEO blog content targeting informational queries.</li>
+              </ul>
+            </div>
+
+            <p class="projtext" style="margin-top:12px; font-weight:600">
+              <strong>Impact:</strong> This sustained growth strengthened Nova's backlink profile and contributed directly to measurable increases in online sales.
+            </p>
+          </div>
+
+          <div>
+            <div class="shot fill">
+              <img src="images/nova-project.webp" alt="Nova construction project visuals" />
+            </div>
+
+            <div class="shot chart" style="margin-top:12px">
+              <img src="images/nova-project-2021.webp" alt="Nova SEO growth since 2021" />
+            </div>
+
+            <div class="shot chart" style="margin-top:12px">
+              <img src="images/nova-organic-traffic.jpg" alt="Nova organic traffic growth" />
+            </div>
+          </div>
+        </div> 
+      </div> 
+
+      <div class="case-divider"></div>
+      <div class="case-chapter">04 — E-Commerce SEO from Zero (Europroduct)</div>
+      
+      <div class="card project">
+        <div class="row">
+          
+          <div style="display:flex; flex-direction:column; justify-content:center;">
+            <div class="k">Client</div>
+            <div class="client">Europroduct</div>
+            
+            <p class="projtext" style="color:var(--ink); font-weight:600; margin-bottom:12px">
+              We started from absolute zero: <strong>0 organic traffic</strong>, <strong>0 Domain Authority</strong>, and <strong>0 indexed pages</strong>.
+            </p>
+
+            <p class="projtext">
+              To launch this brand online, I led the <strong>on-page content strategy</strong>. While the technical team built the site infrastructure, I focused on populating it with high-value, structured content. I ensured category pages weren't just products, but rich semantic resources.
+            </p>
+
+            <div class="box">
+              <h5>My On-Page Strategy</h5>
+              <ul>
+                <li><strong>Content Depth:</strong> Solved "thin content" issues by writing rich descriptions for every major category.</li>
+                <li><strong>Trend Monetization:</strong> Identified the rising "Mochi" trend and created targeted pages that captured <strong>#1 rankings</strong> immediately.</li>
+                <li><strong>Internal Linking:</strong> Built a "Recipes" content hub to drive traffic directly to product pages.</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h5>Results</h5>
+              <ul>
+                <li><strong>0 → 26K+</strong> monthly organic traffic.</li>
+                <li><strong>0 → 22</strong> Domain Authority (DA) via content-led backlinks.</li>
+                <li>Ranked <strong>#1</strong> for high-intent keywords (Seafood, Mochi, Vegan).</li>
+              </ul>
+            </div>
+          </div> 
+
+          <div>
+            <div class="shot fill">
+              <img src="images/europroduct-brand-visual.webp" alt="Europroduct brand visuals" />
+            </div>
+            
+            <div class="shot chart" style="margin-top:12px">
+              <img src="images/europroduct-growth.png" alt="Europroduct SEO growth chart" />
+            </div>
+          </div>
+
+        </div> 
+      </div>
+      
+      <div style="height:16px"></div>
+
+      <section id="media">
+        <div class="case-divider"></div>
+        <p class="hlabel">Freelance writing</p>
+        <h3 class="sec">Freelance Projects with Local Online Media</h3>
+
+        <div class="card project">
+          <div class="row">
+            <div>
+              <p class="projtext" style="margin-top:2px">
+                Alongside my client work, I’ve contributed to independent media platforms and NGOs, including <strong>Indigo</strong>, <strong>Publika</strong>, AT.ge, Liberali, and the Equality Movement.
               </p>
-              <a class="badge"
-                 href="https://publika.ge/author/beka-shatirishvili/"
-                 target="_blank" rel="noopener"
-                 style="text-decoration:none;display:inline-block;margin-top:10px">
-                View author page
-              </a>
+
+              <div class="box">
+                <h5>Topics I’ve explored</h5>
+                <ul>
+                  <li><strong>Labor and class in Georgia</strong>, including lived experiences of low-income workers.</li>
+                  <li><strong>Music journalism</strong>, covering local artists and global subcultures.</li>
+                  <li><strong>Masculinity, gender, and queerness</strong>, often through personal or collective identity.</li>
+                </ul>
+              </div>
+
+              <div class="box">
+                <h5>Results</h5>
+                <ul>
+                  <li>Indigo blog on Kutaisi music event → <strong>Top 5 most-read</strong> blog of the year.</li>
+                  <li>Labor rights story based on my personal experience → <strong>2nd most-read</strong> Indigo article at the time.</li>
+                  <li><strong>4–6 min</strong> average time-on-page (well above typical editorial benchmarks).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid" style="grid-template-columns:repeat(12, 1fr); gap:14px">
+                <div class="card span12" style="overflow:hidden">
+                  <div style="height:210px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.65)">
+                    <img src="images/indigo.png" alt="Indigo — author work cover" style="width:100%;height:100%;object-fit:cover;display:block" />
+                  </div>
+                  <div style="padding:14px;text-align:center">
+                    <div class="client" style="margin:0">Indigo</div>
+                    <a class="badge" href="https://indigo.com.ge/authors/beka-shatirishvili" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;margin-top:10px">View author page</a>
+                  </div>
+                </div>
+
+                <div class="card span12" style="overflow:hidden">
+                   <div style="height:210px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.65)">
+                    <img src="images/publika.png" alt="Publika — author work cover" style="width:100%;height:100%;object-fit:cover;display:block" />
+                  </div>
+                  <div style="padding:14px;text-align:center">
+                    <div class="client" style="margin:0">Publika</div>
+                    <a class="badge" href="https://publika.ge/author/beka-shatirishvili/" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;margin-top:10px">View author page</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="metrics">
-          <div class="metric">
-            <div class="num">Top 5</div>
-            <div class="lab">Most-read (Indigo)</div>
-          </div>
-          <div class="metric">
-            <div class="num">4–6 min</div>
-            <div class="lab">Avg. time-on-page</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       
     </section>
 
@@ -854,173 +659,55 @@ img { max-width: 100%; height: auto; display: block; }
       <p class="hlabel">Other brands & companies</p>
       <h3 class="sec">More clients</h3>
       <p class="subp">Beyond the case studies above, I’ve worked with a wide range of brands on ongoing content, campaigns, and one-off projects.</p>
-      <div class="tags">
-        <span class="tag">Tourism & hospitality brands</span>
-        <span class="tag">Local & international NGOs</span>
-        <span class="tag">Tech & SaaS companies</span>
-        <span class="tag">E-commerce & retail</span>
-        <span class="tag">Education & culture</span>
+      
+      <div class="clients-grid">
+         <div class="client-item"><img src="images/aldagi.webp" alt="Aldagi"><div class="client-name">Aldagi</div><div class="client-desc">Insurance company</div></div>
+         <div class="client-item"><img src="images/bekas.skull.webp" alt="Beka's School"><div class="client-name">Beka’s School</div><div class="client-desc">English language learning center</div></div>
+         <div class="client-item"><img src="images/studio9.webp" alt="Studio9"><div class="client-name">Studio9</div><div class="client-desc">Architectural company</div></div>
+         <div class="client-item"><img src="images/agrosphero.webp" alt="Agrosphere"><div class="client-name">Agrosphere</div><div class="client-desc">Distribution company for agribusiness</div></div>
+         <div class="client-item"><img src="images/diogene.webp" alt="Diogene"><div class="client-name">Diogene</div><div class="client-desc">Publishing house</div></div>
+         <div class="client-item"><img src="images/karcher.webp" alt="Kärcher Georgia"><div class="client-name">Kärcher Georgia</div><div class="client-desc">Industrial cleaning equipment</div></div>
+         <div class="client-item"><img src="images/clipart.webp" alt="Clipart"><div class="client-name">Clipart</div><div class="client-desc">Digital & media communications agency</div></div>
+         <div class="client-item"><img src="images/safco.webp" alt="SafCo Ltd."><div class="client-name">SafCo Ltd.</div><div class="client-desc">Health and Safety Company</div></div>
+         <div class="client-item"><img src="images/remax.webp" alt="RE/MAX"><div class="client-name">RE/MAX</div><div class="client-desc">Real estate agency</div></div>
+         <div class="client-item"><img src="images/kuppersberg.webp" alt="Kuppersberg"><div class="client-name">Kuppersberg</div><div class="client-desc">Kitchen appliances</div></div>
+         <div class="client-item"><img src="images/arttime.webp" alt="Arttime"><div class="client-name">Arttime</div><div class="client-desc">Swiss-made watches and jewelry</div></div>
+         <div class="client-item"><img src="images/smarter.webp" alt="Smarter"><div class="client-name">Smarter</div><div class="client-desc">Smart House and Automatization</div></div>
+         <div class="client-item"><img src="images/psp.webp" alt="PSP"><div class="client-name">PSP</div><div class="client-desc">Pharmacy</div></div>
+         <div class="client-item"><img src="images/bigapple.webp" alt="Big Apple"><div class="client-name">Big Apple</div><div class="client-desc">New York-based shipping company</div></div>
+         <div class="client-item"><img src="images/onepoint.webp" alt="One Point"><div class="client-name">One Point</div><div class="client-desc">Full HR services</div></div>
+         <div class="client-item"><img src="images/lion.trans.webp" alt="Lion Trans"><div class="client-name">Lion Trans</div><div class="client-desc">Auto auction</div></div>
+         <div class="client-item"><img src="images/todua.clinic.webp" alt="Todua Clinic"><div class="client-name">Todua Clinic</div><div class="client-desc">Multidisciplinary clinic</div></div>
+         <div class="client-item"><img src="images/apex.webp" alt="Apex Development"><div class="client-name">Apex Development</div><div class="client-desc">Construction company</div></div>
+         <div class="client-item"><img src="images/gabuild.webp" alt="Gabuild"><div class="client-name">Gabuild</div><div class="client-desc">Store for doors</div></div>
+         <div class="client-item"><img src="images/tekto.webp" alt="Tekto Group"><div class="client-name">Tekto Group</div><div class="client-desc">Development company</div></div>
       </div>
+    </section>
 
-  <div class="clients-grid">
-    <div class="client-item">
-      <img src="images/aldagi.webp" alt="Aldagi">
-      <div class="client-name">Aldagi</div>
-      <div class="client-desc">Insurance company</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/bekas.skull.webp" alt="Beka's School">
-      <div class="client-name">Beka’s School</div>
-      <div class="client-desc">English language learning center</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/studio9.webp" alt="Studio9">
-      <div class="client-name">Studio9</div>
-      <div class="client-desc">Architectural company</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/agrosphero.webp" alt="Agrosphere">
-      <div class="client-name">Agrosphere</div>
-      <div class="client-desc">Distribution company for agribusiness</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/diogene.webp" alt="Diogene">
-      <div class="client-name">Diogene</div>
-      <div class="client-desc">Publishing house</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/karcher.webp" alt="Kärcher Georgia">
-      <div class="client-name">Kärcher Georgia</div>
-      <div class="client-desc">Industrial cleaning equipment</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/clipart.webp" alt="Clipart">
-      <div class="client-name">Clipart</div>
-      <div class="client-desc">Digital & media communications agency</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/safco.webp" alt="SafCo Ltd.">
-      <div class="client-name">SafCo Ltd.</div>
-      <div class="client-desc">Health and Safety Company</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/remax.webp" alt="RE/MAX">
-      <div class="client-name">RE/MAX</div>
-      <div class="client-desc">Real estate agency</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/kuppersberg.webp" alt="Kuppersberg">
-      <div class="client-name">Kuppersberg</div>
-      <div class="client-desc">Kitchen appliances</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/arttime.webp" alt="Arttime">
-      <div class="client-name">Arttime</div>
-      <div class="client-desc">Swiss-made watches and jewelry</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/smarter.webp" alt="Smarter">
-      <div class="client-name">Smarter</div>
-      <div class="client-desc">Smart House and Automatization</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/psp.webp" alt="PSP">
-      <div class="client-name">PSP</div>
-      <div class="client-desc">Pharmacy</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/bigapple.webp" alt="Big Apple">
-      <div class="client-name">Big Apple</div>
-      <div class="client-desc">New York-based shipping company</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/onepoint.webp" alt="One Point">
-      <div class="client-name">One Point</div>
-      <div class="client-desc">Full HR services</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/lion.trans.webp" alt="Lion Trans">
-      <div class="client-name">Lion Trans</div>
-      <div class="client-desc">Auto auction</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/todua.clinic.webp" alt="Todua Clinic">
-      <div class="client-name">Todua Clinic</div>
-      <div class="client-desc">Multidisciplinary clinic</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/apex.webp" alt="Apex Development">
-      <div class="client-name">Apex Development</div>
-      <div class="client-desc">Construction company</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/gabuild.webp" alt="Gabuild">
-      <div class="client-name">Gabuild</div>
-      <div class="client-desc">Store for doors</div>
-    </div>
-
-    <div class="client-item">
-      <img src="images/tekto.webp" alt="Tekto Group">
-      <div class="client-name">Tekto Group</div>
-      <div class="client-desc">Development company</div>
-    </div>
-  </div>
-</section>
-  <section id="testimonials">
+    <section id="testimonials">
       <p class="hlabel">Testimonials</p>
       <h3 class="sec">What collaborators say</h3>
-
       <div class="grid">
         <div class="tcard span6">
-          <p>“Working with Beka was both effortless and impactful. What stood out most was his ability to write with clarity, warmth, and a deep understanding of our school’s values. His work helped us better communicate our message and contributed to real growth in interest and enrollments.”</p>
+          <p>“Working with Beka was both effortless and impactful... contributed to real growth in interest and enrollments.”</p>
           <div class="t-meta">
-  <img class="t-avatar" src="images/beka-berikashvili.jpg" alt="Beka Berikashvili" />
-  <div class="t-who">
-    — <a class="t-link" href="https://www.linkedin.com/in/beka-berikashvili/" target="_blank" rel="noopener">
-      Beka Berikashvili
-    </a>, Founder of “Beka’s School”
-  </div>
-</div>
-  </div>
-
-        <div class="tcard span6">
-          <p>“Working with Beka was a smooth and productive experience. He joined our team as a freelance content writer and quickly proved himself with clear, well-researched, SEO-optimized articles that brought real value to our blog. He always delivered on time, followed our tone and guidelines, and was proactive in coming up with new content ideas.”</p>
-          <div class="t-meta">
-  <img class="t-avatar" src="images/medea-gvachliani.jpg" alt="Medea Ghvachliani" />
-  <div class="t-who">
-    — <a class="t-link" href="https://www.linkedin.com/in/medea-ghvachliani-090a59159/" target="_blank" rel="noopener">Medea Ghvachliani</a> Brand Lead at PSP Pharmacy
-  </div>
-</div>
+            <img class="t-avatar" src="images/beka-berikashvili.jpg" alt="Beka Berikashvili" />
+            <div class="t-who">— <a class="t-link" href="https://www.linkedin.com/in/beka-berikashvili/" target="_blank" rel="noopener">Beka Berikashvili</a>, Founder of “Beka’s School”</div>
+          </div>
         </div>
-
-        <div class="tcard span12">
-          <p>“I had the privilege of working alongside Beka at Alpaca SEO Agency, and I can confidently say he is one of the most talented copywriters/SEO Content Writers I've encountered in the industry. 
-            Beka brings a combination of creative writing skills and deep SEO expertise to every project. His understanding of SEO specifications goes far beyond keyword placement – he truly grasps how to create content that satisfies both search algorithms and human readers. 
-            I highly recommend Beka to any organization seeking a copywriter who understands the intersection of compelling content and SEO strategy. His expertise makes him an invaluable asset to any marketing team.”</p>
+        <div class="tcard span6">
+          <p>“He always delivered on time, followed our tone and guidelines, and was proactive in coming up with new content ideas.”</p>
           <div class="t-meta">
-  <img class="t-avatar" src="images/bondo-kavtaradze.jpg" alt="Bondo Kavtaradze" />
-  <div class="t-who">
-    — <a class="t-link" href="https://www.linkedin.com/in/bkavtaradze/" target="_blank" rel="noopener">Bondo Kavtaradze</a> Co-CEO of Alpaca
-  </div>
-</div>
+            <img class="t-avatar" src="images/medea-gvachliani.jpg" alt="Medea Ghvachliani" />
+            <div class="t-who">— <a class="t-link" href="https://www.linkedin.com/in/medea-ghvachliani-090a59159/" target="_blank" rel="noopener">Medea Ghvachliani</a> Brand Lead at PSP Pharmacy</div>
+          </div>
+        </div>
+        <div class="tcard span12">
+          <p>“Beka brings a combination of creative writing skills and deep SEO expertise... His expertise makes him an invaluable asset to any marketing team.”</p>
+          <div class="t-meta">
+            <img class="t-avatar" src="images/bondo-kavtaradze.jpg" alt="Bondo Kavtaradze" />
+            <div class="t-who">— <a class="t-link" href="https://www.linkedin.com/in/bkavtaradze/" target="_blank" rel="noopener">Bondo Kavtaradze</a> Co-CEO of Alpaca</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1029,22 +716,16 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="footer">
         <div>
           <h4>Looking for an SEO & Content Specialist?</h4>
-          <p>From fixing site structure to crafting brand stories — I help companies grow through better content. I am available for <strong>full-time roles</strong> as well as consulting or project-based work.</p>
-          <p style="margin-top:10px">If you think my skills would be a good fit for your team or your next campaign, feel free to reach out. I’m always happy to discuss new opportunities.</p>
+          <p>From fixing site structure to crafting brand stories — I help companies grow through better content. I am available for <strong>full-time roles</strong> as well as consulting.</p>
+          <p style="margin-top:10px">If you think my skills would be a good fit for your team or your next campaign, feel free to reach out.</p>
         </div>
         <div class="meta">
           <div><strong>Email:</strong> <a href="mailto:bekashatirishvili04@gmail.com">bekashatirishvili04@gmail.com</a></div>
           <div><strong>Phone:</strong> <a href="tel:+995568810836">+995 568 81 08 36</a></div>
-          <div>
-  <strong>LinkedIn:</strong> 
-  <a href="https://www.linkedin.com/in/beka-shatirishvili-7a7baa249/" target="_blank" rel="noopener">
-    linkedin.com/in/beka-shatirishvili
-  </a>
-</div>
+          <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/beka-shatirishvili-7a7baa249/" target="_blank" rel="noopener">linkedin.com/in/beka-shatirishvili</a></div>
           <div><strong>Location:</strong> Tbilisi, Georgia (remote-friendly)</div>
         </div>
       </div>
-
       <div class="footnote">© 2025 Beka Shatirishvili • Senior Copywriter & On-Page SEO Specialist</div>
     </section>
   </div>
